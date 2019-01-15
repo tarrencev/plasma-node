@@ -15,7 +15,7 @@ class RPCServerService {
 
     this.server.post('/', async (req, res) => {
       const response = await this.app.services.jsonrpc.handle(req.body)
-      res.json(response)
+      res.send(response)
     })
   }
 
